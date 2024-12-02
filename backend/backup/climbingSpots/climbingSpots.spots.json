@@ -1,0 +1,62 @@
+[{
+  "_id": {
+    "$oid": "673ce882d520a3750077ad7a"
+  },
+  "name": "WoodRock",
+  "location": "Poprad",
+  "description": "Malá ale pekná stena, boulder sa tu sice nenachádza ale je tu viacero vysokých ciest pre lezcov, ktorí vedia používať expresky. Predistených ciest je menej ale určite si niečo vyberiete. Treba si dopredu rezervovat termín.",
+  "image": "uploads\\1732044930329-woodRock.jpg",
+  "link": "https://lezeckastenatatry.sk/",
+  "createdBy": {
+    "$oid": "673c872440bf33759d0198c8"
+  },
+  "ratings": [
+    {
+      "userId": {
+        "$oid": "673c872440bf33759d0198c8"
+      },
+      "rating": 4,
+      "_id": {
+        "$oid": "673ce8e2d520a3750077ad83"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-19T19:35:30.339Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T19:37:06.009Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "673cf093d520a3750077ad94"
+  },
+  "name": "K2",
+  "location": "Žilina",
+  "description": "Pomerne veľká stena v Žiline. Veľa ciest, či už na samoiste, na spoločné istenie z hora alebo na expresky. V teplejšom počasí môžete využiť vonkajší boulder, ktorý je fakt super, alebo dlhšie steny, ktoré sa ťahajú cez jednu celú vonkajšiu stenu a ponúkajú aj samoist.",
+  "image": "uploads\\1732046995137-k2.jpg",
+  "link": "https://www.k2zilina.sk/",
+  "createdBy": {
+    "$oid": "673c872440bf33759d0198c8"
+  },
+  "ratings": [
+    {
+      "userId": {
+        "$oid": "673c872440bf33759d0198c8"
+      },
+      "rating": 5,
+      "_id": {
+        "$oid": "673cf098d520a3750077ad99"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-19T20:09:55.139Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T20:10:00.990Z"
+  },
+  "__v": 1
+}]

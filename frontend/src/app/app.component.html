@@ -1,0 +1,26 @@
+<nav class="menu-bar">
+  <img src="/images/logo3.png" alt="Logo Lezenia" class="logo" routerLink="/">
+  <div class="menu-links">
+    <a routerLink="/" >Domov</a>
+    <a routerLink="/getting-started" routerLinkActive="active">Začíname</a>
+    <a routerLink="/gear" routerLinkActive="active">Vybavenie</a>
+    <a routerLink="/spots" routerLinkActive="active">Kde liezť</a>
+  </div>
+  
+  <div class="auth-buttons">
+    <a *ngIf="!authService.isLoggedIn()" routerLink="/register" class="register-link">Registrácia</a>
+    <a *ngIf="!authService.isLoggedIn()" routerLink="/login">Login</a>
+    <a *ngIf="authService.isLoggedIn()" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>
+      Autor: Eliška Krajčíová |
+      <a href="mailto:eliska.krajciova@gmail.com" class="email-link">Napíš mi mail</a>
+    </p>
+  </div>
+</footer>

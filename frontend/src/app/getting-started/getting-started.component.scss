@@ -1,0 +1,61 @@
+.getting-started-banner {
+    background-image: url('/images/zaklady1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: rgba(255, 255, 255, 0.797);
+    text-align: center;
+    margin-bottom: 20px;
+  
+    .banner-overlay {
+      background: rgba(0, 0, 0, 0.7); // Adjust transparency level for the whole banner
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      width: 100%;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+}  
+
+.getting-started-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.797);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  p-splitter {
+    width: 100%;
+  }
+  
+  p-listbox {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .info-display {
+    padding: 20px;
+    background-color: rgba(36, 34, 34, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  h4 {
+    color: #4CAF50;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  p {
+    color: rgba(255, 255, 255, 0.797);
+    margin-top: 10px;
+  }
+  

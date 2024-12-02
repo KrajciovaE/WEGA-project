@@ -1,0 +1,15 @@
+<div class="home-banner">
+    <div class="banner-overlay">
+        <h1>Poďme liezť</h1>
+        <p>Objavte radosť z lezenia, či už v interiéri alebo vonku. Či ste začiatočník alebo skúsený lezec, sme tu, aby sme vám pomohli začať.</p>
+        <button pButton label="Začať" routerLink="/getting-started" class="p-button-outlined"></button>
+    </div>
+</div>
+  
+  <div class="features-section">
+    <p-card *ngFor="let feature of features" header="{{ feature.title }}" subheader="{{ feature.subtitle }}">
+      <p>{{ feature.description }}</p>
+      <button pButton label="Viac" routerLink="{{ feature.link }}" ></button>
+    </p-card>
+  </div>
+  

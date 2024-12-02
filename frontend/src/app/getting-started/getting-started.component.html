@@ -1,0 +1,60 @@
+<div class="getting-started-banner">
+    <div class="banner-overlay">
+        <h1>Začíname s Lezením</h1>
+        <p>Lezenie je šport, ktorý kombinuje fyzickú silu, mentálne sústredenie a dobrodružstvo. Tu je sprievodca, ako začať s lezením, čo by ste mali vedieť a tipy pre začiatočníkov</p>
+    </div>
+</div>
+
+<div class="getting-started-container">
+  
+    <p-tabView >
+      <!-- Typy lezenia -->
+      <p-tabPanel header="Typy Lezenia">
+        <p-splitter [panelSizes]="[30, 70]" styleClass="mb-5" [style]="{ height: '40%' }">
+          <!-- Panel pre Listbox -->
+          <ng-template pTemplate>
+            <p-listbox [options]="types" [(ngModel)]="selectedType" optionLabel="name" placeholder="Vyberte typ lezenia"></p-listbox>
+          </ng-template>
+          
+          <!-- Panel pre obsah na základe výberu -->
+          <ng-template pTemplate>
+            <div *ngIf="selectedType" class="info-display">
+              <h4>{{ selectedType.name }}</h4>
+              <p>{{ selectedType.description }}</p>
+            </div>
+          </ng-template>
+        </p-splitter>
+      </p-tabPanel>
+  
+      <!-- Základné vybavenie pre začiatočníkov -->
+      <p-tabPanel header="Základné Lezecké Vybavenie">
+        <p-splitter [panelSizes]="[30, 70]" styleClass="mb-5" [style]="{ height: '40%' }">
+          <ng-template pTemplate>
+            <p-listbox [options]="equipment" [(ngModel)]="selectedEquipment" optionLabel="name" placeholder="Vyberte vybavenie"></p-listbox>
+          </ng-template>
+          <ng-template pTemplate>
+            <div *ngIf="selectedEquipment" class="info-display">
+              <h4>{{ selectedEquipment.name }}</h4>
+              <p>{{ selectedEquipment.description }}</p>
+            </div>
+          </ng-template>
+        </p-splitter>
+      </p-tabPanel>
+  
+      <!-- Tipy a stratégie -->
+      <p-tabPanel header="Tipy a Stratégie">
+        <p-splitter [panelSizes]="[30, 70]" styleClass="mb-5" [style]="{ height: '50%' }">
+          <ng-template pTemplate>
+            <p-listbox [options]="tips" [(ngModel)]="selectedTip" optionLabel="name" placeholder="Vyberte tip"></p-listbox>
+          </ng-template>
+          <ng-template pTemplate>
+            <div *ngIf="selectedTip" class="info-display">
+              <h4>{{ selectedTip.name }}</h4>
+              <p>{{ selectedTip.description }}</p>
+            </div>
+          </ng-template>
+        </p-splitter>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  

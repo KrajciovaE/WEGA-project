@@ -1,0 +1,57 @@
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { TabViewModule } from 'primeng/tabview';
+import { ListboxModule } from 'primeng/listbox';
+import { SplitterModule } from 'primeng/splitter';
+
+@Component({
+  selector: 'app-getting-started',
+  standalone: true,
+  imports: [CommonModule, FormsModule, TabViewModule, ListboxModule, SplitterModule],
+  templateUrl: './getting-started.component.html',
+  styleUrls: ['./getting-started.component.scss']
+})
+export class GettingStartedComponent implements OnInit {
+
+  protected selectedType: any;
+  protected selectedEquipment: any;
+  protected selectedTip: any;
+
+  ngOnInit(): void {
+
+    this.selectedType = this.types[0];
+    this.selectedEquipment = this.equipment[0];
+    this.selectedTip = this.tips[0];
+  }
+
+  protected types = [
+    { name: 'Bouldering', description: 'Krátke, ale náročné trasy bez lana, zvyčajne na stenách do výšky 4-5 metrov, s hrubými podložkami na tlmenie pádov.' },
+    { name: 'Športové lezenie', description: 'Vyššie trasy s prednastavenými kotvami, použitie lana a istenia pre bezpečnosť.' },
+    { name: 'Tradičné lezenie', description: 'Skúsení lezci si sami umiestňujú istiace pomôcky do prirodzených štrbín a otvorov v skale.' },
+    { name: 'Lezenie v interiéri', description: 'Ideálne pre začiatočníkov, keďže ponúka kontrolované podmienky, odborný dohľad a rôzne trasy.' },
+    { name: 'Kde začat', description: 'Odporúčame začat s lezením v interiéri, najmä s boulderingom, pretože nevyžaduje veľa vybavenia, čo ho robí cenovo dostupnejším a poskytuje jednoduchý vstup do sveta lezenia. Pre naučenie sa základov, by sme odporúčali pridať sa k lezeckej telocvični alebo nájsť skúsenú lezeckú skupinu. Mnohé telocvične ponúkajú úvodné kurzy, kde vás naučia základné techniky lezenia a bezpečnosť, ako je istenie, úchop a pohyb po stene.'}
+  ];
+
+  protected equipment = [
+    { name: 'Na začiatok', description: 'Pre začiatok zvážte Prenájom Vybavenia, väčšina lezeckých telocviční požičiava topánky, sedáky a istiace zariadenia. Prenájom je skvelý spôsob, ako vyskúšať rôzne značky a štýly pred tým, než si kúpite vlastné vybavenie. Naučte sa, ako správne používať každý kus vybavenia, najmä istiace zariadenia a sedáky. Ak je to možné, absolvujte lezecký kurz, aby ste sa uistili, že ovládate základy bezpečnosti. Investujte Postupne, začnite s nákupom základných kúskov, ako sú topánky a vrecko na magnézium, a postupne si doplňte svoju lezeckú výbavu. Takto môžete investovať do kvalitných kúskov, keď sa vaše schopnosti zlepšujú.'},
+    { name: 'Lezecké Topánky', description: 'Lezecké topánky poskytujú priľnavosť a presnosť potrebnú na zvládanie stien a stupov. Vhodné topánky budú tesne sediace. Ako začiatočník zvyčajne oceníte neutrálne alebo mierne ohnuté topánky pre pohodlie pri dlhšom lezení. Vyberajte si topánky s lepkavou gumovou podrážkou pre lepšiu priľnavosť a odolným vrchným materiálom. Pre začiatočníkov by sme odporúčali topánky ako La Sportiva Tarantulace alebo Evolv Defy.' },
+    { name: 'Magnézium a Vrecko', description: 'Bežné magnézium, často vo forme uhličitanu horečnatého, je vhodné pre väčšinu začiatočníkov. Možnosti zahŕňajú sypké magnézium, gule s magnéziom (menej neporiadku, ale aj menšia difúzia na rukách, čo má za dôsledok zvýšenú potrebu znovunanášania magnézia na ruky) a tekuté magnesium(neodporúčame). Pokiaľ sa rozhodnete pre syúké magnézium budete potrebovať aj vrecko v ktorom ho uschováte. Vrecko by malo byť ľahko dostupné, mať bezpečné uzatváranie a možnosť ho pripevniť na sedák, aby ste k nemu mali jednoduchý prístup. Spoľahlivé a cenovo dostupné vrecká na magnézium ponúkajú značky ako Black Diamond a Petzl.' },
+    { name: 'Sedák', description: 'Sedák je nevyhnutný pre akékoľvek lanové lezenie, pretože umožňuje bezpečné pripojenie k lanu a istiacemu zariadeniu. Sedák by mal byť pohodlný okolo pása a stehien. Hľadajte polstrované nožné oká a pás pre väčšie pohodlie. Začiatočníci preferujú sedáky s vačším množstvom spôn pre nastavenie nožných ôk a centrálneho istiaceho bodu. Niekoľko pútok na vybavenie je praktické na ukladanie ďalšieho vybavenia. Odporúčame sedáky ako Petzl Sama, Corax alebo Black Diamond Momentum.' },
+    { name: 'Istiace Zariadenie', description: 'Istiace zariadenia sa používajú na kontrolu lana počas lezenia, pomáhajú ovládať výstupy a zaisťujú bezpečné zostupy. Začiatočníci často používajú zariadenia s asistovaným brzdením, ako Petzl GriGri, alebo tubusové zariadenia, ako Black Diamond ATC. Zariadenia s asistovaným brzdením sú preferované mnohými kvôli vyššej bezpečnosti, zatiaľ čo tubusové zariadenia sú ľahšie a jednoduchšie na naučenie základov istenia. Petzl GriGri je vysoko odporúčané istiace zariadenie s asistovaným brzdením. Ekonomickejšou možnosťou je Black Diamond ATC, ATC-XP, alebo Singing Rock Rama.' },
+    { name: 'Lezecké Lano', description: 'Pre vonkajšie lezenie je kvalitné lano nevyhnutné pre ochranu a bezpečnosť počas výstupov. Dynamické laná, ktoré sa naťahujú na absorbovanie energie z pádov, sú ideálne pre športové a tradičné lezenie. Priemer lana pre začiatočníkov je obvykle medzi 9,8 mm a 10,2 mm pre trvanlivosť a ľahké manipulovanie. Pre vonkajšie lezenie je štandardom lano dĺžky 60-70 metrov. Na lezenie v interiéri sú laná zvyčajne kratšie a telocvične ich často poskytujú. Laná Mammut Infinity alebo Black Diamond s priemerom 9,9 mm sú odolné a všestranné, čo z nich robí dobrú voľbu pre začiatočníkov.'},
+    { name: 'Prilba', description: 'Prilba chráni hlavu pred možným padajúcim kamiením, údermi a pádmi počas vonkajšieho lezenia. Hľadajte ľahkú, pohodlnú prilbu s dobrou ventiláciou a nastaviteľným pásikom. Dôležitý je aj bezpečný remienok pod bradou. Z prilieb odporúčame Petzl Boreo a Black Diamond Half Dome.'},
+    { name: 'Crash Pady ', description: 'Crash pady sú hrubé podložky používané pri boulderingu na tlmenie pádov. Ak začínate s boulderingom, hľadajte stredne veľký crash pad, ktorý je ľahko prenosný. Mnohé padáky sú tiež vybavené popruhmi na prenášanie ako batoh. Z bouldermatiek odporúčame Ocún Joker Fts alebo Black Diamond Circuit.'}
+  ];
+
+  protected tips = [
+    { name: 'Technika pred silou', description: 'Lezenie je často viac o technike než o surovej sile, najmä pre začiatočníkov a mierne pokročilých. Efektívna technika z vás urobí lepšieho lezca v dlhodobom horizonte. Používajte nohy na udržanie rovnováhy. Sústreďte sa na presné umiestnenie chodidiel, využívajte končeky prstov na nohách pre lepšie uchytenie a snažte sa nohy umiestňovať správne už na prvý pokus. Udržiavajte telo blízko steny, čo zlepšuje stabilitu a kontrolu. Skúšajte rôzne uhly tela a nájdite najefektívnejšiu polohu pre každý pohyb. Ak je to možné, držte ruky vystreté, aby ste šetrili energiu. Ohnuté ruky sa rýchlo unavia, takže využitím vystretých rúk môžete váhu podporiť cez kostru a nevyčerpávať svaly. Plánujte pohyby vopred, namiesto toho, aby ste reagovali na každý chyt. Pozorovanie a vizualizácia trasy pred lezením vám pomôže zostať sústredený a pripravený na ďalší krok.' },
+    { name: 'Bezpečnostné zručnosti', description: 'Bezpečnosť je v lezení najdôležitejšia. Pri boulderingu sa to týka najmä učenia, ako bezpečne padať na podložky a používať správnu techniku rúk a nôh. Pri lezení s lanom sa musíte naučiť viazať uzly, používať istiace zariadenia a efektívne komunikovať so svojim partnerom. Buďte trpezliví a tieto zručnosti pravidelne precvičujte – sú kľúčové na prevenciu zranení.' },
+    { name: 'Sila úchopu', description: 'Sila úchopu je kľúčová pri lezení, no na začiatku ju netreba trénovať príliš intenzívne. Hangboardy sú vynikajúce na tréning úchopu, keď už máte za sebou nejaké skúsenosti. Začiatočníci by mali byť pri tréningu na hangboarde opatrní, aby predišli zraneniam, ale časom môžu byť kontrolované visy na veľkých chytkách prínosné. Sila prstov je dôležitá najmä na ťažšie trasy s menšími chyťmi. Postupne zvyšujte intenzitu cvičení na prsty, napríklad pomocou gripov alebo lezeckej steny s postupne menšími chyťmi. Cvičenia ako visy, zhyby s pridanou záťažou a cvičenia na úchop prstami môžu posilniť špecifické svalové skupiny a vybudovať silu prstov a predlaktí. Začnite s nízkou záťažou a postupne pridávajte.' },
+    { name: 'Sila jadra', description: 'Sila jadra je kľúčová pri stabilizácii tela na stene, najmä pri náročných alebo previsnutých trasách. Silné jadro umožňuje efektívne prenášanie váhy a zlepšuje rovnováhu. Medzi cviky môžete zaradiť napriklad tieto: Planky, Bočné Planky, Dvíhanie Nôh vo zvise a Cvičenia „Toes-to-Bar“, Mountain Climbers a Bicyklové Skracovačky' },
+    { name: 'Lezecká výdrž', description: 'Výdrž je dôležitá pre dlhšie trasy a náročnejšie cesty. Na zlepšenie lezeckej výdrže odporúčame napríklad ARC Tréning (Aerobic Restoration and Capillarity): Lezte na ľahkej trase alebo traversujte stenu nepretržite po dlhší čas, približne 20-30 minút. Tento tréning zlepšuje prietok krvi v predlaktiach a buduje výdrž. Taktiež môžete vyskúsať Intervalové Lezenie: Podobne ako intervalový tréning v iných športoch, intervalové lezenie zahŕňa striedanie vysokointenzívneho lezenia s prestávkami. Pomáha rozvíjať výdrž a silu, pretože simuluje nároky náročných trás. Ďaľší variant je Objemové Lezenie: Trénujte častejšie na stredne náročných trasách namiesto zameriavania sa iba na ťažké cesty. Toto nielenže buduje výdrž, ale tiež vám umožňuje precvičovať rôzne techniky na ľahšom teréne.'},
+    { name: 'Mentálny trening a sustredenie', description: 'Lezenie si vyžaduje mentálnu silu a sústredenie, najmä pri náročných trasách alebo strachu z pádu. Mentálny tréning môže byť rovnako dôležitý ako fyzická príprava. Pred lezením si predstavte trasu a zamerajte sa na každý pohyb. Vizualizácia vám pomôže cítiť sa viac pripravený a zníži úzkosť z náročných alebo neznámych sekcií. Lezenie je o postupnom zlepšovaní, preto sa netrápte, ak svoje ciele nedosiahnete okamžite. Naučte sa oceniť malé zlepšenia a oslávte každý pokrok. Strach z pádu je pri lezení bežný. Trénovanie kontrolovaných pádov v bezpečnom prostredí s dôveryhodným ističom vám môže pomôcť cítiť sa pohodlnejšie a veriť svojim schopnostiam a výbave.'},
+    { name: 'Oddych a regenerácia', description: 'Pretrénovanie môže viesť k zraneniam a spomaleniu pokroku. Oddych je nevyhnutný pre rast svalov a regeneráciu. Doprajte si aspoň jeden alebo dva dni oddychu medzi náročnými lezeckými tréningmi, najmä ak trénujete silu alebo výdrž. Strečing a masáže penovým valcom pomáhajú znižovať napätie svalov, predchádzať zraneniam a zlepšovať flexibilitu, čo všetko prispieva k lepšiemu lezeckému výkonu. Dbajte na dostatok spánku pre podporu regenerácie a sústreďte sa na vyváženú stravu s dostatkom bielkovín, sacharidov a tukov na podporu tréningu.'},
+    { name: 'Pravidelnosť, obmena', description: 'Čím viac leziete, tým viac sa zlepšujete. Pravidelné lezenie vám umožní konzistentne budovať zručnosti a získavať prirodzený cit pre pohyby. Experimentujte s rôznymi druhmi lezenia, ako je bouldering, lezenie s horným lanom a športové lezenie. Každý štýl sa sústreďuje na rôzne aspekty, od sily v boulderingu až po výdrž a techniku v športovom lezení. Nezostávajte v komfortnej zóne—skúšanie ťažších alebo neznámych trás vám pomôže identifikovať slabiny a pracovať na nových technikách. Lezenie s ľuďmi, ktorí sú skúsenejší, vás môže motivovať vyskúšať nové veci, ponúknuť užitočnú spätnú väzbu a naučiť pokročilé techniky.'},
+  ];
+}

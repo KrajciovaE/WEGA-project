@@ -1,0 +1,34 @@
+<div class="spots-container">
+  <h2>Kde liezť</h2>
+  <p class="main-text">Objavte naše obľúbené miesta na lezenie, či už v interiéri alebo vonku. Prihláste sa aby ste mohli hodnotiť a pridávať vlastné miesta.</p>
+
+ <!-- Tlačidlo na pridanie miesta -->
+ <div class="add-spot-container" *ngIf="authService.isLoggedIn()">
+    <a routerLink="/add-spot" class="add-spot-button">
+      + Pridať nové miesto
+    </a>
+  </div>
+
+<div class="spots-list">
+  <p-card *ngFor="let spot of spots" [header]="spot.name" class="spot-card">
+    <div class="card-content">
+      <!-- Spot Image -->
+      <img [src]="'http://localhost:5000/' + spot.image" alt="{{ spot.name }}" class="spot-image">
+
+      <div class="text-content">
+        <p-rating [(ngModel)]="spot.averageRating" [readonly]="true" [cancel]="false" class="spot-rating"></p-rating>
+        <h3 class="spot-location"> <i class="pi pi-map-marker"></i> {{ spot.location }} </h3>
+        <p>{{ spot.description }}</p>
+        <a [href]="spot.link" target="_blank" class="p-button p-button-outlined">Viac informácií</a>
+      </div>
+    </div>
+
+    <!-- Add Rating Section -->
+    <div *ngIf="authService.isLoggedIn()" class="add-rating-container">
+      <p>Pridaj hodnotenie:</p>
+      <p-rating [(ngModel)]="spot.newRating" stars="5" cancel="false" class="add-rating-stars" (onRate)="addRating(spot._id, spot.newRating)"></p-rating>
+    </div>
+  </p-card>
+</div>
+
+</div>

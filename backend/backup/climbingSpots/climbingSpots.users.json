@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "673c6af9e989ba9cb7a921a7"
+  },
+  "username": "Petko Mrkvicka",
+  "email": "novypouzivatel2@priklad.sk",
+  "password": "$2a$10$3QWOLA8e39JJCJoSBvVGfeulipfQWzolbxszFwotCdvUpDJRR7v06",
+  "createdAt": {
+    "$date": "2024-11-19T10:39:53.977Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T10:39:53.977Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673c6b3fe989ba9cb7a921ae"
+  },
+  "username": "Janko Hrasko",
+  "email": "jankohrasko@priklad.sk",
+  "password": "$2a$10$fQwmS9jN4KEjvnDNlXSAUefJZft3keNxmZQot6Ko3aD/owNtjPC6a",
+  "createdAt": {
+    "$date": "2024-11-19T10:41:03.449Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T10:41:03.449Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673c6e6ae989ba9cb7a921b6"
+  },
+  "username": "Steeve Rogers",
+  "email": "steeverogers@priklad.sk",
+  "password": "$2a$10$pHFv459HLb.dol3mtO/lNuYLOmf8FcQoEOqH0RD0Ln5jnEFfyXVqe",
+  "createdAt": {
+    "$date": "2024-11-19T10:54:34.046Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T10:54:34.046Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673c6f5140bf33759d0197c6"
+  },
+  "username": "Tony Stark",
+  "email": "tonystark@marvel.com",
+  "password": "$2a$10$PkpeTLXxQ7uG4lN/.8oGKOUTK3FmpHigoMvfqp.QAlS9w/jkkEOsm",
+  "createdAt": {
+    "$date": "2024-11-19T10:58:25.467Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T10:58:25.467Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673c706540bf33759d0197ce"
+  },
+  "username": "Bucky Barns",
+  "email": "buckybarns@marvel.com",
+  "password": "$2a$10$19PCMjf09lm9MOoWXTkDQODIt2CpMsjU4j1W7QzyUGAnSumeCM6aS",
+  "createdAt": {
+    "$date": "2024-11-19T11:03:01.362Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T11:03:01.362Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673c872440bf33759d0198c8"
+  },
+  "username": "Wanda Maximoff",
+  "email": "wandamaximoff@marvel.com",
+  "password": "$2a$10$W/WvxOx0rzSpv/pVqrC88OnCm6yzVnMrIF7QKImdXlLTdwwPoboZG",
+  "createdAt": {
+    "$date": "2024-11-19T12:40:04.006Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T12:40:04.006Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673c892840bf33759d0198cf"
+  },
+  "username": "Stan Lee",
+  "email": "stanlee@marvel.com",
+  "password": "$2a$10$R73s6CHro0Tf/PF3ZWBy6OHOmhXenWTGVwYWIkI1qWXHnw34cAzSK",
+  "createdAt": {
+    "$date": "2024-11-19T12:48:40.425Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T12:48:40.425Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673c8c3a7a8fe48f64607a3b"
+  },
+  "username": "Peter Parker",
+  "email": "peterparker@marvel.com",
+  "password": "$2a$10$mo/Nkr5W0qXM9sJ0oXKaF.4bQGWsqn.w6hch7ab7eYTeL.oNVp9OC",
+  "createdAt": {
+    "$date": "2024-11-19T13:01:46.036Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-19T13:01:46.036Z"
+  },
+  "__v": 0
+}]

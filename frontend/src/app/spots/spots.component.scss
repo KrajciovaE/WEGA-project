@@ -1,0 +1,144 @@
+.spots-container {
+  text-align: center;
+  padding: 20px;
+  color: #ffffffd0;
+
+  .main-text {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  h2 {
+    font-size: 200%;
+    margin-bottom: 10px;
+  }
+
+  .add-spot-container {
+    margin: 20px 0;
+
+    .add-spot-button {
+      display: inline-block;
+      background-color: #4caf50;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #388e3c;
+      }
+    }
+
+  h2 {
+    font-size: 1000px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  }
+}
+
+.spots-list {
+  display: flex;
+  flex-direction: column; /* Karty budú v stĺpci */
+  align-items: center;
+  gap: 20px;
+}
+
+.spot-card {
+  width: 90%; /* Nastavíme relatívnu šírku */
+  max-width: 900px; /* Maximálna šírka na väčších obrazovkách */
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly darker background */
+  color: white;
+
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Obsah sa automaticky zalomí na ďalší riadok */
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Na menších obrazovkách prejde obsah na stĺpcový layout */
+    text-align: center;
+  }
+}
+
+.spot-image {
+  width: 40%; /* Relatívna šírka */
+  max-width: 350px; /* Maximálna šírka na väčších obrazovkách */
+  height: auto;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    width: 100%; /* Na menších obrazovkách bude obrázok cez celú šírku */
+    margin-bottom: 15px;
+  }
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 15px;
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+  }
+
+  .spot-rating {
+    margin-bottom: 10px;
+    display: inline-block;
+
+    &.readonly {
+      opacity: 0.8; /* Slightly fade it to show it's read-only */
+      cursor: default;
+    }
+  }
+
+  .spot-location {
+    font-size: 1rem;
+    color: #fec126;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 10px;
+    color: #cccccc;
+  }
+
+}
+
+.add-rating-container {
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light separator */
+
+  p {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .add-rating-stars {
+    .p-rating-star {
+      font-size: 20px; /* Larger stars for better appearance */
+    }
+  }
+}

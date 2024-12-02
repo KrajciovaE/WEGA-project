@@ -1,0 +1,28 @@
+<div class="background-container">
+  <div class="overlay-container">
+    <h2>Pridať nové miesto</h2>
+    <form [formGroup]="spotForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Meno miesta</label>
+        <input id="name" formControlName="name" type="text" placeholder="Zadajte názov miesta" />
+      </div>
+      <div class="form-group">
+        <label for="location">Lokalita</label>
+        <input id="location" formControlName="location" type="text" placeholder="Zadajte lokalitu" />
+      </div>
+      <div class="form-group">
+        <label for="description">Popis</label>
+        <textarea id="description" formControlName="description" placeholder="Zadajte krátky popis"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="link">Odkaz</label>
+        <input id="link" formControlName="link" type="url" placeholder="Pridajte odkaz na webstránku" />
+      </div>
+      <div class="form-group">
+        <label for="image">Obrázok</label>
+        <input id="image" type="file" (change)="onFileChange($event)" />
+      </div>
+      <button type="submit" class="submit-button">Pridať miesto</button>
+    </form>
+  </div>
+</div>

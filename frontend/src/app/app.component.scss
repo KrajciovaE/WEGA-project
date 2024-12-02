@@ -1,0 +1,131 @@
+.menu-bar {
+  background-color: #1c1b1b;
+  color: rgba(255, 255, 255, 0.874);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+
+  .logo {
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .menu-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-grow: 1; /* Center the links between logo and auth buttons */
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+
+    a {
+      color: rgba(245, 245, 245, 0.829);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #4caf50; /* Green highlight on hover */
+        color: white;
+      }
+    }
+
+    .active {
+      font-weight: bold;
+      color: #4caf50;
+      border-bottom: 2px solid #4caf50; /* Indicate active link */
+    }
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    a {
+      color: rgba(255, 255, 255, 0.816);
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: #4caf50;
+        color: white;
+      }
+    }
+
+    .register-link {
+      color: #4caf50;
+      border: 2px solid #4caf50;
+
+      &:hover {
+        background-color: #4caf50;
+        color: white;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #222; /* Dark background */
+  color: #ffffff9b; /* Light text */
+  padding: 105;
+  text-align: center;
+  font-size: 0.9rem;
+
+  a {
+    color: #4caf50; /* Green link */
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer .email-link {
+    color: #4caf50; /* Green color for the email link */
+    text-decoration: none; /* Remove underline for a cleaner look */
+    font-weight: bold; /* Make it stand out */
+  }
+  
+  .footer .email-link:hover {
+    color: #388e3c; /* Darker green on hover */
+    text-decoration: underline; /* Add underline on hover for better UX */
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-bar {
+    flex-direction: column;
+    align-items: center; /* Center items on smaller screens */
+    gap: 10px;
+
+    .menu-links {
+      justify-content: center; /* Keep links centered */
+      width: 100%; /* Take full width for better stacking */
+      gap: 10px;
+    }
+
+    .auth-buttons {
+      width: 100%;
+      justify-content: center; /* Center auth buttons */
+    }
+  }
+
+  .menu-links a,
+  .auth-buttons a {
+    display: block; /* Stack links vertically */
+    padding: 10px;
+    text-align: center; /* Center align the text */
+  }
+}

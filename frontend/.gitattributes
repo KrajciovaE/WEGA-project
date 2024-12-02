@@ -1,0 +1,16 @@
+# Set default behavior
+* text=auto
+
+# Force LF for these files
+*.sh eol=lf
+*.js eol=lf
+*.ts eol=lf
+*.json eol=lf
+*.css eol=lf
+*.html eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary
+*.zip binary
